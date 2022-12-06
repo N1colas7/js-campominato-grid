@@ -9,15 +9,17 @@ function createGridSquare()
 
 let grid = document.getElementById('grid');
 
-for (let i=0; i<100; i++) {
-    const currentSquare = createGridSquare() ;
-    
-    currentSquare.addEventListener('click',function () {
+let button_first = document.getElementById('play')
+button_first.addEventListener('click',function () {
+        
+    for (let i = 1; i <= 100; i++) {
+        let containerSquare = document.getElementById('container')
+        let currentSquare = createGridSquare();
+        
+        currentSquare.addEventListener('click',function () {
         this.classList.add('clicked');
     })
 
-
-
-
-    grid.appendChild(currentSquare);
-}
+        grid.appendChild(currentSquare);
+    }
+})

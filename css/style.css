@@ -8,13 +8,22 @@ body{
     background-color: cadetblue;
 }
 
-.contain-button{
-    margin: 3rem auto;
+header{
     width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
 }
 
-.button{
-    margin-left: 45%;
+.contain-header{
+    height: 100%;
+    display: flex;
+}
+
+.play{
+    height: 70%;
 }
 
 .container{
