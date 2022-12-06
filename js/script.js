@@ -1,8 +1,9 @@
-function createGridSquare() 
+function createGridSquare(num) 
 {
     const currentElement = document.createElement('div')
 
-    currentElement.classList.add('square')
+    currentElement.classList.add('square');
+    currentElement.innerText= num
 
     return currentElement;
 }
@@ -14,12 +15,17 @@ button_first.addEventListener('click',function () {
         
     for (let i = 1; i <= 100; i++) {
         let containerSquare = document.getElementById('container')
-        let currentSquare = createGridSquare();
+        let currentSquare = createGridSquare(i);
+       
         
         currentSquare.addEventListener('click',function () {
+        currentSquare.innerText = i;
+    
+        
         this.classList.add('clicked');
+        console.log(`Hai cliccato la cella numero ${i} `);
     })
-
         grid.appendChild(currentSquare);
+        
     }
 })
